@@ -15,6 +15,7 @@
     --text-color: #1A1C1E;
     --text-light: #777777;
     --gold-color: #D4AF37;
+    --red-color: #E86D5E;
     --transition: all 0.3s ease;
 }
 
@@ -46,7 +47,7 @@
 body {
     font-family:quicksand-book;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--dark-color);
     background-color: var(--light-color);
     font-weight: 900;
 }
@@ -94,20 +95,12 @@ p{
 }
 
 .section-title {
-    font-size: 2rem;
+    font-family: alfa;
+    font-size: 4rem;
     margin-bottom: 2rem;
     text-align: center;
     color: var(--dark-color);
     position: relative;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-color);
-    margin: 10px auto;
 }
 
 /* Header Styles */
@@ -174,22 +167,6 @@ p{
     color: var(--primary-color);
 }
 
-.nav-list a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: var(--transition);
-}
-
-.nav-list a:hover::after,
-.nav-list a.active::after {
-    width: 100%;
-}
-
 .hamburger {
     display: none;
     cursor: pointer;
@@ -251,164 +228,203 @@ p{
     animation: fadeIn 2s ease;
 }
 
-/* Featured Dishes */
+/* Featured Slider Styles */
 .featured {
     padding: 80px 0;
-    background-color: white;
-    background-image: url('images/korean-pattern.png');
-    background-size: 300px;
-    background-blend-mode: overlay;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: none;
 }
 
-.featured-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.mpd-subtitle {
+    color: var(--text-light);
+    margin-bottom: 70px;
+    font-size: 20px;
+    max-width: 862px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.featured-slider {
+    display: flex;
+    align-items: center;
     gap: 30px;
-    margin-top: 40px;
+    overflow-x: visible;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    width: 100%;
 }
 
 .dish-card {
-    background-color: var(--secondary-color);
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 330px;
+    height: 460px;
+    transition: all 0.3s ease;
+    background: none;
+    border: 2px solid var(--dark-color);
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    border: 1px solid var(--accent-color);
+    opacity: 1;
+    transform: scale(1);
 }
 
-.dish-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(210, 51, 105, 0.2);
-}
+/* Keep the rest of your existing CSS for dish cards and buttons */
 
 .dish-card img {
-    width: 100%;
-    height: 250px;
+    margin-top: 20px;
+    align-self: center;
+    width: 290px;
+    height: 200px;
     object-fit: cover;
+    border: 2px solid var(--dark-color);
+    border-radius: 5px;
 }
 
-.dish-card h3 {
-    padding: 15px 20px 5px;
-    font-size: 1.3rem;
+.dish-card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.dish-card-content h3 {
+    font-size: 1.5rem;
     color: var(--dark-color);
 }
 
-.dish-card p {
-    padding: 0 20px;
-    color: var(--text-light);
+.korean-word {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+.dish-card-content p {
+    color: var(--dark-color);
+    margin-bottom: 15px;
     font-size: 0.9rem;
+    font-weight: 100;
 }
 
-
-/* About Section */
-.about {
-    padding: 80px 0;
-    background-color: var(--secondary-color);
-    position: relative;
-    overflow: hidden;
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
-.about::before {
-    content: '';
+.stars{
+    color: var(--primary-color);
+    font-size: 30px;
+    -webkit-text-stroke: 1px var(--dark-color);
+}
+
+.prev-btn, .next-btn {
     position: absolute;
-    top: 0;
+    background: transparent;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    color: var(--dark-color);
+    border: none;
+    font-size: 50px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-btn {
     left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-color);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+.yellow-separator{
+    margin: 0;
+    background-color: var(--gold-color);
+    min-width: 1200px;
+    height: 28px;
     width: 100%;
-    height: 100%;
-    background-image: url('images/korean-pattern-light.png');
-    background-size: 200px;
-    opacity: 0.1;
-    z-index: 0;
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
+.orange-mini-separator{
+    width: 100%;
+    margin: 0;
+    background-color: var(--red-color);
+    min-width: 1200px;
+    height: 28px;
+}
+
+.orange-separator{
+    width: 100%;
+    margin: 0;
+    background-color: var(--red-color);
+    min-width: 1200px;
+    height: 147px;
+}
+
+.orange-separator h1{
+    font-size: 5.6rem;
+    color: var(--light-color);
     text-align: center;
-    position: relative;
-    z-index: 1;
 }
 
-.about-content p {
-    margin-bottom: 30px;
-    font-size: 1.1rem;
+.home-about{
+    padding-top: 40px;
+    padding-bottom: 80px;
 }
 
-/* Korean BBQ Experience */
-.bbq-experience {
-    padding: 80px 0;
-    background-color: white;
+.home-about .orange-separator
+{
+    height: 28px;
 }
 
-.bbq-grid {
+.h-gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.h-gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid var(--dark-color);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.h-about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 40px;
 }
 
-.bbq-item {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    transition: var(--transition);
-    border: 1px solid var(--accent-color);
-}
-
-.bbq-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(210, 51, 105, 0.1);
-}
-
-.bbq-item i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.bbq-item h3 {
-    margin-bottom: 10px;
-    color: var(--dark-color);
-}
-
-/* Contact Info */
-.contact-info {
-    padding: 80px 0;
-    background-color: white;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.info-item1 {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    transition: var(--transition);
-    border: 1px solid var(--accent-color);
-}
-
-.info-item1:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(210, 51, 105, 0.1);
-}
-
-.info-item1 i {
-    font-size: 25px;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.info-item1 h3 {
-    margin-bottom: 10px;
-    color: var(--dark-color);
+.h-about-item img,
+.h-gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid var(--dark-color);
+    border-radius: 5px;
 }
 
 /* Footer */
@@ -826,40 +842,11 @@ p{
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%;
+    border: 3px solid var(--dark-color);
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     transition: var(--transition);
-}
-
-.gallery-overlay {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: white;
-    transition: var(--transition);
-}
-
-.gallery-item:hover .gallery-overlay {
-    bottom: 0;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.gallery-overlay h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-    font-family: 'Noto Sans KR', sans-serif;
-}
-
-.gallery-overlay p {
-    font-size: 0.9rem;
-    opacity: 0.9;
 }
 
 /* Lightbox Modal (to be implemented with JavaScript) */
