@@ -6,6 +6,7 @@
     <title>Seoul Bites | Korean BBQ & More</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <!-- Header with Navigation -->
@@ -15,7 +16,7 @@
                 <a href="index.html" class="logo-link">
                     <img class="logo" src="assets/images/logo/logo.png" alt="Seoul Bites Logo">
                 </a>
-                <div class="logo-text">Seoul Bites</div> <!-- Add this if you want text next to logo -->
+                <div class="logo-text">Seoul Bites</div>
             </div>
     
             <nav class="navbar">
@@ -48,26 +49,134 @@
     <!-- Featured Menu Items -->
     <section class="featured">
         <div class="container">
-            <h2 class="section-title">Our Signature Dishes</h2>
-            <div class="featured-grid">
-                <div class="dish-card">
-                    <img src="images/bulgogi.jpg" alt="Bulgogi">
-                    <h3>Bulgogi</h3>
-                    <p>Marinated beef grilled to perfection, served with banchan</p>
-                    <span class="price">$19.99</span>
+            <h2 class="section-title">Most <span class="colored-menu">Popular</span> <br>Dishes</h2>
+            <p class="mpd-subtitle">Delight in the best of Korean cuisine with our selection of most-loved dishes, prepared using time-honored traditions and fresh ingredients.</p>
+            <div class="slider-container">
+                <button class="prev-btn">&#10094;</button>
+                <button class="next-btn">&#10095;</button>
+                <div class="featured-slider">
+                    <div class="dish-card">
+                        <img src="assets/images/appetizers/fried_zucchini.png" alt="Bulgogi">
+                        <div class="dish-card-content">
+                            <h3>Bulgogi <br><span class="korean-word">상추겉절이 | Sanchu-geotjeori</span></h3>
+                            <ul class="stars"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></ul>
+                            <p>Marinated beef grilled to perfection, served with banchan</p>
+                        </div>
+                    </div>
+                    <div class="dish-card">
+                        <img src="assets/images/appetizers/fried_zucchini.png" alt="Bibimbap">
+                        <div class="dish-card-content">
+                            <h3>Bibimbap <br><span class="korean-word">상추겉절이 | Sanchu-geotjeori</span></h3>
+                            <ul class="stars"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></ul>
+                            <p>Mixed rice with vegetables, beef, egg, and spicy sauce</p>
+                        </div>
+                    </div>
+                    <div class="dish-card">
+                        <img src="assets/images/appetizers/fried_zucchini.png" alt="Kimchi Pancake">
+                        <div class="dish-card-content">
+                            <h3>Kimchi Pancake <br><span class="korean-word">상추겉절이 | Sanchu-geotjeori</span></h3>
+                            <ul class="stars"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i></ul>
+                            <p>Savory pancake made with fermented kimchi and flour</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="dish-card">
-                    <img src="images/bibimbap.jpg" alt="Bibimbap">
-                    <h3>Dolsot Bibimbap</h3>
-                    <p>Mixed rice with vegetables, meat, and fried egg in hot stone pot</p>
-                    <span class="price">$16.99</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="yellow-separator"></div>
+        <div class="orange-separator">
+            <h1>
+                SeoulBites
+            </h1>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-header">
+                <h1>Seoul Bites Gallery</h1>
+                <p>Experience our restaurant through images of our dishes, ambiance, and culinary artistry</p>
+            </div>
+             <!-- Gallery Grid -->
+             <div class="h-gallery-grid">
+                <div class="h-gallery-item">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
                 </div>
-                <div class="dish-card">
-                    <img src="images/kimchi.jpg" alt="Kimchi Pancake">
-                    <h3>Kimchi Jeon</h3>
-                    <p>Savory kimchi pancake with dipping sauce</p>
-                    <span class="price">$8.99</span>
+                <div class="h-gallery-item">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
                 </div>
+                <div class="h-gallery-item">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
+                </div>
+                <div class="h-gallery-item">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
+                </div>
+                <div class="h-gallery-item">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
+                </div>
+                <div class="h-gallery-item">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
+                </div>
+             </div>
+             <a href="gallery.html" class="btn">Show More</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="orange-mini-separator"></div>
+        <div class="yellow-separator"></div>
+    </section>
+
+    <section class="home-about">
+        <div class="container">
+            <div class="gallery-header">
+                <h1><span class="colored-menu">About</span> Us</h1>
+                <p>SeoulBites was born from a love for authentic Korean cuisine and a desire to 
+                    share the rich flavors of Korea with our community. What started as a small family-run 
+                    kitchen has grown into a vibrant dining destination where tradition meets innovation. 
+                    We take inspiration from the lively street markets of Seoul and the comforting home-cooked 
+                    meals passed down through generations. Every dish on our menu is a celebration of Korean 
+                    culture, made with fresh ingredients and time-honored techniques.</p>
+            </div>
+            <div class="h-about-grid">
+                <div class="h-about-item">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
+                </div>
+                <div class="h-gallery-item">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
+                </div>
+                <div class="h-gallery-item">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-about">
+        <div class="container">
+            <div class="gallery-header">
+                <h1><span class="colored-menu">Contact</span> Us</h1>
+            </div>
+            <div class="home-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+            <div class="home-contact">
             </div>
         </div>
     </section>
