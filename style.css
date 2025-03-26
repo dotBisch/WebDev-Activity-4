@@ -915,6 +915,32 @@ p{
 }
 
 /* About Hero Section */
+
+.about-content {
+    flex: 1;
+}
+.about-page {
+    padding: 100px 0 50px;
+    background-color: var(--light-color);
+}
+
+.about-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.about-content p{
+    color: var(--dark-color);
+    font-size: 20px;
+}
+
+.about-title {
+    font-size: 64px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .about-hero {
     height: 60vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../WebDev-Activity-4/assets/images/bg/about-us.png') no-repeat center center/cover;
@@ -960,7 +986,7 @@ p{
 /* Our Story */
 .story-section {
     padding: 80px 0;
-    background-color: white;
+    background-color: var(--light-color);
 }
 
 .story-content {
@@ -1001,15 +1027,103 @@ p{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Our Mission */
+.mission-section {
+    padding: 80px 0;
+    background-color: var(--light-color);
+}
+
+.mission-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.mission-text {
+    flex: 1;
+}
+
+.mission-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.mission-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.mission-text strong {
+    color: var(--primary-color);
+}
+
+.mission-image {
+    flex: 1;
+}
+
+.mission-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Our Values */
+.values-section {
+    padding: 80px 0;
+    background-color: var(--light-color);
+}
+
+.values-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.values-text {
+    flex: 1;
+}
+
+.values-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.values-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.values-text strong {
+    color: var(--primary-color);
+}
+
+.values-image {
+    flex: 1;
+}
+
+.values-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 /* Team Section */
 .team-section {
     padding: 80px 0;
-    background-color: var(--secondary-color);
+    background-color: var(--light-color);
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
