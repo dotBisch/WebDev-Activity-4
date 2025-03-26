@@ -123,13 +123,32 @@ p{
 
 .header .container {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px 15px;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 0px 0 40px;
 }
 
 .logo {
     width: 70px;
+}
+
+.logo-text{
+    align-items: center;
+    font-family: quicksand-bold;
+    font-size: 32px;
+    color: var(--primary-color);
+    font-weight: bolder;
+    -webkit-text-stroke: 2px var(--primary-color);
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0;
 }
 
 .nav-list {
@@ -142,10 +161,10 @@ p{
 }
 
 .nav-list a {
-    font-family: quicksand-book;
+    font-family: quicksand-bold;
+    font-size: 24px;
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 500;
     transition: var(--transition);
     position: relative;
 }
@@ -189,7 +208,7 @@ p{
 .hero {
     height: 100vh;
     background: url(/assets/images/bg/homebg.png);
-    background-size:75%;
+    background-size:cover;
     background-position: right;
     background-repeat: no-repeat;
     color: white;
@@ -220,6 +239,7 @@ p{
     font-family: quicksand-book;
     color: var(--primary-color);
     font-size: 32px;
+    animation: fadeIn 1.5s ease;
 }
 
 .hero p {
