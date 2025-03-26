@@ -18,8 +18,33 @@
     --transition: all 0.3s ease;
 }
 
+@font-face {
+    font-family: product-sans;
+    src: url(assets/fonts/Product\ Sans\ Regular.ttf);
+}
+
+@font-face {
+    font-family: quicksand-light;
+    src: url(assets/fonts/Quicksand_Light.otf);
+}
+
+@font-face {
+    font-family: quicksand-bold;
+    src: url(assets/fonts/Quicksand_Bold.otf);
+}
+
+@font-face {
+    font-family: quicksand-book;
+    src: url(assets/fonts/Quicksand_Book.otf);
+}
+
+@font-face {
+    font-family: alfa;
+    src: url(assets/fonts/AlfaSlabOne-Regular.ttf);
+}
+
 body {
-    font-family: 'Noto Sans KR', 'Poppins', sans-serif;
+    font-family:quicksand-light;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
@@ -115,6 +140,7 @@ body {
 }
 
 .nav-list a {
+    font-family: quicksand-book;
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
@@ -178,7 +204,9 @@ body {
     margin-bottom: 20px;
     animation: fadeIn 1.5s ease;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: alfa;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
 
 .hero p {
