@@ -402,29 +402,12 @@ p{
     margin-bottom: 40px;
 }
 
-.h-gallery-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border: 3px solid var(--dark-color);
-    border-radius: 5px;
-    transition: var(--transition);
-}
 
 .h-about-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 5px;
     margin-top: 40px;
-}
-
-.h-about-item img,
-.h-gallery-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border: 3px solid var(--dark-color);
-    border-radius: 5px;
 }
 
 /* Footer */
