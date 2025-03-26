@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul Bites | Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Seoul Bites</a>
+            
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Page Content -->
+    <main class="gallery-page">
+        <div class="container">
+            <div class="gallery-header">
+                <h1>Seoul Bites Gallery</h1>
+                <p>Experience our restaurant through images of our dishes, ambiance, and culinary artistry</p>
+            </div>
+
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="food">Food</button>
+                <button class="filter-btn" data-filter="bbq">BBQ</button>
+                <button class="filter-btn" data-filter="interior">Interior</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Food Category -->
+                <div class="gallery-item food">
+                    <img src="images/gallery/bibimbap.jpg" alt="Dolsot Bibimbap">
+                    <div class="gallery-overlay">
+                        <h3>Dolsot Bibimbap</h3>
+                        <p>Our signature hot stone pot bibimbap with fresh ingredients</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item food">
+                    <img src="images/gallery/kimchi-jjigae.jpg" alt="Kimchi Jjigae">
+                    <div class="gallery-overlay">
+                        <h3>Kimchi Jjigae</h3>
+                        <p>Spicy kimchi stew with pork and tofu</p>
+                    </div>
+                </div>
+
+                <!-- BBQ Category -->
+                <div class="gallery-item bbq">
+                    <img src="images/gallery/bbq-platter.jpg" alt="Korean BBQ Platter">
+                    <div class="gallery-overlay">
+                        <h3>BBQ Platter</h3>
+                        <p>Premium selection of meats for tabletop grilling</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bbq">
+                    <img src="images/gallery/galbi.jpg" alt="Galbi">
+                    <div class="gallery-overlay">
+                        <h3>Galbi</h3>
+                        <p>Marinated beef short ribs, our most popular BBQ item</p>
+                    </div>
+                </div>
+
+                <!-- Interior Category -->
+                <div class="gallery-item interior">
+                    <img src="images/gallery/dining-area.jpg" alt="Dining Area">
+                    <div class="gallery-overlay">
+                        <h3>Dining Area</h3>
+                        <p>Our modern yet traditional Korean dining space</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item interior">
+                    <img src="images/gallery/bbq-tables.jpg" alt="BBQ Tables">
+                    <div class="gallery-overlay">
+                        <h3>BBQ Tables</h3>
+                        <p>Special tables with built-in grills for authentic experience</p>
+                    </div>
+                </div>
+
+                <!-- Events Category -->
+                <div class="gallery-item events">
+                    <img src="images/gallery/cooking-class.jpg" alt="Cooking Class">
+                    <div class="gallery-overlay">
+                        <h3>Kimchi Making Class</h3>
+                        <p>Monthly traditional kimchi-making workshops</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item food">
+                    <img src="images/gallery/japchae.jpg" alt="Japchae">
+                    <div class="gallery-overlay">
+                        <h3>Japchae</h3>
+                        <p>Stir-fried glass noodles with vegetables and beef</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item bbq">
+                    <img src="images/gallery/samgyeopsal.jpg" alt="Samgyeopsal">
+                    <div class="gallery-overlay">
+                        <h3>Samgyeopsal</h3>
+                        <p>Thick-cut pork belly grilled at your table</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item food">
+                    <img src="images/gallery/bingsu.jpg" alt="Bingsu">
+                    <div class="gallery-overlay">
+                        <h3>Bingsu</h3>
+                        <p>Traditional Korean shaved ice dessert</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item interior">
+                    <img src="images/gallery/bar.jpg" alt="Bar Area">
+                    <div class="gallery-overlay">
+                        <h3>Bar Area</h3>
+                        <p>Featuring traditional Korean alcoholic beverages</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item events">
+                    <img src="images/gallery/celebration.jpg" alt="Korean Celebration">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Celebration</h3>
+                        <p>Special events for Korean holidays</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">Seoul Bites</a>
+                    <p>맛있는 순간, 맛있는 추억 (Delicious moments, delicious memories)</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-yelp"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Seoul Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
