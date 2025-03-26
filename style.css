@@ -917,7 +917,7 @@ p{
 /* About Hero Section */
 .about-hero {
     height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/about/hero-about.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../WebDev-Activity-4/assets/images/bg/about-us.png') no-repeat center center/cover;
     color: white;
     display: flex;
     align-items: center;
@@ -957,82 +957,13 @@ p{
     font-size: 1.1rem;
 }
 
-/* History Timeline */
-.history-section {
-    padding: 80px 0;
-    background-color: var(--secondary-color);
-}
-
-.history-timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.history-timeline::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: var(--primary-color);
-    top: 0;
-    bottom: 0;
-    left: 50px;
-    margin-left: -1px;
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-.timeline-year {
-    position: absolute;
-    width: 100px;
-    height: 40px;
-    background-color: var(--primary-color);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    border-radius: 4px;
-    left: -120px;
-}
-
-.timeline-content {
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    margin-left: 80px;
-    position: relative;
-}
-
-.timeline-content::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 3px solid var(--primary-color);
-    border-radius: 50%;
-    left: -30px;
-    top: 30px;
-}
-
-.timeline-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: var(--dark-color);
-}
-
-/* Philosophy Section */
-.philosophy-section {
+/* Our Story */
+.story-section {
     padding: 80px 0;
     background-color: white;
 }
 
-.philosophy-content {
+.story-content {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -1040,31 +971,31 @@ p{
     margin: 0 auto;
 }
 
-.philosophy-text {
+.story-text {
     flex: 1;
 }
 
-.philosophy-text h2 {
+.story-text h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: var(--dark-color);
 }
 
-.philosophy-text p {
+.story-text p {
     margin-bottom: 15px;
     font-size: 1.1rem;
     line-height: 1.6;
 }
 
-.philosophy-text strong {
+.story-text strong {
     color: var(--primary-color);
 }
 
-.philosophy-image {
+.story-image {
     flex: 1;
 }
 
-.philosophy-image img {
+.story-image img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
