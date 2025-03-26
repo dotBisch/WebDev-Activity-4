@@ -410,6 +410,81 @@ p{
     margin-top: 40px;
 }
 
+/* Home Contact Section */
+.home-contact {
+    padding: 80px 0 60px;
+    background: url(assets/images/bg/h-contact.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+}
+
+.home-contact .gallery-header {
+    margin-bottom: 40px;
+}
+
+.home-contact img {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+.contact-hours {
+    margin-bottom: 40px;
+}
+
+.contact-hours p {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-hours span {
+    font-size: 1rem;
+    color: var(--dark-color);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.contact-items {
+    display: flex;
+    max-width: 900px;
+    margin: 30px auto 40px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cg-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: transparent;
+    text-align: left;
+}
+
+.cg-item i {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.cg-item p {
+    font-size: 0.8rem;
+    color: var(--dark-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.home-contact .copyright {
+    margin-top: 40px;
+    padding-top: 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
 /* Footer */
 .footer {
     background-color: var(--dark-color);
@@ -461,7 +536,6 @@ p{
 .copyright {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
 }
