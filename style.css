@@ -75,33 +75,22 @@ p{
 }
 
 .btn {
-    display: inline-block;
     padding: 12px 24px;
     background-color: var(--primary-color);
-    color: white;
+    color: var(--light-color);
     text-decoration: none;
-    border-radius: 4px;
-    transition: var(--transition);
+    border-radius: 10px;
     font-weight: 500;
     border: none;
     cursor: pointer;
+    font-family: quicksand-book;
+    font-size: 24px;
 }
 
 .btn:hover {
-    background-color: #B52A5A;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(210, 51, 105, 0.3);
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
+    background-color: var(--light-color);
     color: var(--primary-color);
-}
-
-.btn-outline:hover {
-    background-color: var(--primary-color);
-    color: white;
 }
 
 .section-title {
@@ -134,17 +123,13 @@ p{
 
 .header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    padding: 20px 15px;
+    padding: 0px 15px;
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-family: 'Noto Sans KR', sans-serif;
+    width: 70px;
 }
 
 .nav-list {
@@ -203,35 +188,46 @@ p{
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/korean-hero.jpg') no-repeat center center/cover;
+    background: url(/assets/images/bg/homebg.png);
+    background-size:75%;
+    background-position: right;
+    background-repeat: no-repeat;
     color: white;
     display: flex;
     align-items: center;
-    text-align: center;
     margin-top: 70px;
 }
 
 .hero-content {
     width: 100%;
-    padding: 0 20px;
+    padding: 0;
+    margin-top: -70px;
+    margin-left: 70px;
+    text-align: left;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    color: var(--dark-color);
+    font-size: 112px;
     animation: fadeIn 1.5s ease;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family: alfa;
     letter-spacing: 1px;
     font-weight: 400;
+    margin-bottom: -40px;
+}
+
+.hero h2{
+    font-family: quicksand-book;
+    color: var(--primary-color);
+    font-size: 32px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    color: var(--dark-color);
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 70px;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
     animation: fadeIn 2s ease;
 }
 
@@ -605,7 +601,7 @@ p{
 }
 
 .colored-our{
-    color: var(--dark-colorr);
+    color: var(--dark-color);
 }
 
 .colored-menu{
