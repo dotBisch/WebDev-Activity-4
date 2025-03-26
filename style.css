@@ -8,13 +8,13 @@
 /* Korean Color Palette */
 :root {
     --primary-color: #E2784E;
-    --secondary-color: #F6F6F6; /* Soft pink background */
-    --accent-color: #F6F6F6; /* Lighter pink accent */
-    --dark-color: #2E2E2E; /* Dark gray for text */
-    --light-color: #F6F6F6; /* Very light pink for backgrounds */
+    --secondary-color: #FFEEDC; 
+    --accent-color: #F6F6F6; 
+    --dark-color: #2E2E2E;
+    --light-color: #F6F6F6; 
     --text-color: #1A1C1E;
     --text-light: #777777;
-    --gold-color: #D4AF37; /* Traditional Korean gold */
+    --gold-color: #D4AF37;
     --transition: all 0.3s ease;
 }
 
@@ -208,7 +208,7 @@ p{
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 70px; /* Account for fixed header */
+    margin-top: 70px;
 }
 
 .hero-content {
@@ -284,13 +284,6 @@ p{
     font-size: 0.9rem;
 }
 
-.price {
-    display: block;
-    padding: 15px 20px;
-    font-weight: 700;
-    color: var(--primary-color);
-    font-size: 1.2rem;
-}
 
 /* About Section */
 .about {
@@ -600,12 +593,13 @@ p{
 }
 
 .menu-content p{
-    color: #333333;
+    color: var(--dark-color);
     font-size: 20px;
 }
 
 .menu-title {
     font-size: 64px;
+    margin-top: 50px;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -618,11 +612,9 @@ p{
     color: var(--primary-color);
 }
 
-
-
 .menu-subtitle {
     color: var(--text-light);
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     font-size: 20px;
     max-width: 600px;
     text-align: center;
@@ -636,10 +628,14 @@ p{
 }
 
 .menu-section h2 {
-    font-size: 1.8rem;
+    font-size: 40px;
     color: var(--dark-color);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.menu-section h3 {
+    font-size: 32px;
+    color: var(--dark-color);
     border-bottom: 2px solid var(--accent-color);
 }
 
@@ -651,112 +647,102 @@ p{
 
 .menu-items {
     display: grid;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .menu-item {
-    background-color: white;
-    border-radius: 8px;
+    width: 340px;
+    height: 410px;
+    border: 2.5px solid var(--dark-color);
+    border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    background-color: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
-    border-left: 4px solid var(--accent-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(210, 51, 105, 0.1);
-    border-left: 4px solid var(--primary-color);
+    transform: translateY(-5px);
+    border: 2.5px solid var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
+/* Menu Item Image */
+.menu-item-img {
+    width: 300px;
+    height: 175px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border: 2.5px solid var(--dark-color);
+}
+
+/* Menu Item Text Content */
+.item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dish Names */
 .item-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--dark-color);
     display: flex;
     justify-content: space-between;
 }
 
-.price {
-    color: var(--primary-color);
-    font-weight: 600;
+.dish-korean {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    font-weight: 400;
 }
 
+/* Description */
 .item-info p {
-    color: var(--text-light);
+    color: var(--dark-color);
     font-size: 0.95rem;
     line-height: 1.5;
-}
-
-.option {
-    font-size: 0.85rem;
-    color: var(--text-light);
-    margin-top: 5px;
-    font-style: italic;
-}
-
-.menu-subsection {
-    margin-top: 30px;
-}
-
-.menu-subsection h3 {
-    font-size: 1.3rem;
-    color: var(--dark-color);
     margin-bottom: 15px;
-    font-weight: 500;
+    flex-grow: 1;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-    .menu-layout {
-        flex-direction: column;
+/* Price */
+.price {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: auto;
+    text-align: left;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .menu-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        grid-template-columns: 1fr;
     }
     
-    .menu-nav {
+    .menu-item {
         width: 100%;
-        position: static;
-        margin-bottom: 40px;
-    }
-    
-    .menu-nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    
-    .menu-nav li {
-        margin-bottom: 0;
-    }
-    
-    .menu-nav a {
-        border-left: none;
-        border-bottom: 3px solid transparent;
-        padding: 10px 15px;
-    }
-    
-    .menu-nav a:hover,
-    .menu-nav a.active {
-        border-left: none;
-        border-bottom: 3px solid var(--primary-color);
+        max-width: 340px;
+        margin: 0 auto;
     }
 }
 
-@media (max-width: 576px) {
-    .menu-title {
-        font-size: 2rem;
-    }
-    
-    .menu-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .item-info h3 {
-        flex-direction: column;
-    }
-    
-    .price {
-        margin-top: 5px;
-    }
-}
 /* Gallery Page Styles */
 .gallery-page {
     padding: 100px 0 50px;
@@ -939,7 +925,7 @@ p{
 
 /* About Page Styles */
 .about-page {
-    padding-top: 70px; /* Account for fixed header */
+    padding-top: 70px;
 }
 
 /* About Hero Section */
@@ -1368,7 +1354,7 @@ p{
 
 /* Contact Page Styles */
 .contact-page {
-    padding-top: 70px; /* Account for fixed header */
+    padding-top: 70px;
 }
 
 /* Contact Hero Section */
