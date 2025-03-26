@@ -7,12 +7,12 @@
 
 /* Korean Color Palette */
 :root {
-    --primary-color: #D23369; /* Korean red - similar to traditional hanbok colors */
-    --secondary-color: #FFF5F7; /* Soft pink background */
-    --accent-color: #F8E1E7; /* Lighter pink accent */
+    --primary-color: #E2784E;
+    --secondary-color: #F6F6F6; /* Soft pink background */
+    --accent-color: #F6F6F6; /* Lighter pink accent */
     --dark-color: #2E2E2E; /* Dark gray for text */
-    --light-color: #FFF9FA; /* Very light pink for backgrounds */
-    --text-color: #333333;
+    --light-color: #F6F6F6; /* Very light pink for backgrounds */
+    --text-color: #1A1C1E;
     --text-light: #777777;
     --gold-color: #D4AF37; /* Traditional Korean gold */
     --transition: all 0.3s ease;
@@ -44,10 +44,27 @@
 }
 
 body {
-    font-family:quicksand-light;
+    font-family:quicksand-book;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
+    font-weight: 900;
+}
+
+h1 {
+    font-family: alfa;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-family: product-sans;
+    letter-spacing: 1px;
+}
+
+p{
+    font-family:quicksand-book;
+    font-weight: 700;
 }
 
 .container {
@@ -541,56 +558,76 @@ body {
 }
 
 .menu-nav {
-    width: 250px;
-    position: sticky;
-    top: 100px;
-    align-self: flex-start;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    padding: 20px 0;
+    width: 100%;
+    margin: 30px 0 40px;
+    overflow-x: auto;
+    padding: 10px 0;
 }
 
 .menu-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     list-style: none;
-}
-
-.menu-nav li {
-    margin-bottom: 5px;
+    justify-content: center;
 }
 
 .menu-nav a {
-    display: block;
-    padding: 12px 25px;
+    display: flex;
     color: var(--text-color);
     text-decoration: none;
-    font-weight: 500;
+    border: 3px solid var(--dark-color);
+    border-radius: 15px;
     transition: var(--transition);
-    border-left: 3px solid transparent;
+    white-space: nowrap;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-.menu-nav a:hover,
-.menu-nav a.active {
-    color: var(--primary-color);
-    background-color: var(--accent-color);
-    border-left: 3px solid var(--primary-color);
+.menu-nav a:hover {
+    background-color: #FFEEDC;
+    border-color: #E2784E;
+    color: #E2784E;
 }
+
 
 .menu-content {
     flex: 1;
 }
 
-.menu-title {
-    font-size: 2.5rem;
-    color: var(--dark-color);
-    margin-bottom: 10px;
-    font-family: 'Noto Sans KR', sans-serif;
+.menu-content p{
+    color: #333333;
+    font-size: 20px;
 }
+
+.menu-title {
+    font-size: 64px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.colored-our{
+    color: var(--dark-colorr);
+}
+
+.colored-menu{
+    color: var(--primary-color);
+}
+
+
 
 .menu-subtitle {
     color: var(--text-light);
     margin-bottom: 40px;
-    font-size: 1.1rem;
+    font-size: 20px;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .menu-section {
@@ -604,7 +641,6 @@ body {
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--accent-color);
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .section-note {
@@ -736,7 +772,6 @@ body {
     font-size: 2.5rem;
     color: var(--dark-color);
     margin-bottom: 15px;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .gallery-header p {
@@ -924,7 +959,6 @@ body {
 .about-hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    font-family: 'Noto Sans KR', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -944,7 +978,6 @@ body {
     font-size: 2rem;
     color: var(--dark-color);
     margin-bottom: 15px;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .section-header p {
@@ -1043,7 +1076,6 @@ body {
     font-size: 2rem;
     margin-bottom: 20px;
     color: var(--dark-color);
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .philosophy-text p {
@@ -1356,7 +1388,6 @@ body {
 .contact-hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    font-family: 'Noto Sans KR', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -1389,7 +1420,6 @@ body {
     font-size: 1.8rem;
     margin-bottom: 30px;
     color: var(--dark-color);
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .form-group {
@@ -1438,7 +1468,6 @@ body {
     font-size: 1.8rem;
     margin-bottom: 30px;
     color: var(--dark-color);
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .info-item2 {
@@ -1509,7 +1538,6 @@ body {
     font-size: 2rem;
     margin-bottom: 30px;
     color: var(--dark-color);
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .map-container {
@@ -1529,7 +1557,6 @@ body {
 .cta-content h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .cta-content p {
