@@ -188,7 +188,7 @@ p{
 .hero {
     height: 100vh;
     background: url(/assets/images/bg/homebg.png);
-    background-size:cover;
+    background-size:contain;
     background-position: right;
     background-repeat: no-repeat;
     color: white;
