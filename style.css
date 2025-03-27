@@ -270,7 +270,7 @@ p{
     transition: all 0.3s ease;
     background: none;
     border: 2px solid var(--dark-color);
-    border-radius: 10px;
+    border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -294,8 +294,8 @@ li::marker{
     height: 200px;
     object-fit: cover;
     border: 2px solid var(--dark-color);
-    border-radius: 5px;
-    margin-left: 20px;
+    border-radius: 9px;
+    margin-left: 18px;
 }
 
 .dish-card-content {
