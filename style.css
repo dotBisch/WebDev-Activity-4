@@ -45,11 +45,7 @@
 }
 
 body {
-    font-family:quicksand-book;
     line-height: 1.6;
-    color: var(--dark-color);
-    background-color: var(--light-color);
-    font-weight: 900;
 }
 
 h1 {
@@ -61,6 +57,12 @@ h1 {
 h2{
     font-family: product-sans;
     letter-spacing: 1px;
+}
+
+h3{
+    font-family: quicksand-book;
+    color: var(--dark-color);
+    font-weight: 900;
 }
 
 p{
@@ -235,7 +237,7 @@ p{
 }
 
 .mpd-subtitle {
-    color: var(--text-light);
+    color: var(--dark-color);
     margin-bottom: 70px;
     font-size: 20px;
     max-width: 862px;
@@ -250,22 +252,20 @@ p{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 60px;
+    overflow: hidden;
 }
 
 .featured-slider {
     display: flex;
     align-items: center;
     gap: 30px;
-    overflow-x: visible;
-    scroll-behavior: smooth;
-    padding: 20px 0;
     width: 100%;
+    padding: 20px 0;
+    transition: transform 0.5s ease;
 }
 
 .dish-card {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 330px;
+    flex: 0 0 330px; /* Fixed width */
     height: 460px;
     transition: all 0.3s ease;
     background: none;
@@ -273,20 +273,29 @@ p{
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    opacity: 1;
-    transform: scale(1);
+    opacity: 0;
+    transform: scale(0.95);
 }
 
-/* Keep the rest of your existing CSS for dish cards and buttons */
+li::marker{
+    content: "";
+}
+
+.dish-card.active {
+    display: block; 
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+}
 
 .dish-card img {
     margin-top: 20px;
-    align-self: center;
     width: 290px;
     height: 200px;
     object-fit: cover;
     border: 2px solid var(--dark-color);
     border-radius: 5px;
+    margin-left: 20px;
 }
 
 .dish-card-content {
@@ -436,9 +445,9 @@ p{
 }
 
 .contact-hours p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--dark-color);
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 10px;
 }
 
@@ -472,7 +481,7 @@ p{
 }
 
 .cg-item p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--dark-color);
     line-height: 1.6;
     margin: 0;
@@ -655,6 +664,7 @@ p{
 }
 
 .menu-nav a {
+    font-family: quicksand-book;
     display: flex;
     color: var(--text-color);
     text-decoration: none;
@@ -788,7 +798,7 @@ p{
 }
 
 .dish-korean {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: quicksand-book;
     font-size: 1rem;
     color: var(--text-light);
     margin-bottom: 10px;
@@ -806,6 +816,7 @@ p{
 
 /* Price */
 .price {
+    font-family: quicksand-book;
     color: var(--primary-color);
     font-weight: 700;
     font-size: 1.2rem;
@@ -850,7 +861,7 @@ p{
 }
 
 .gallery-header p {
-    color: var(--text-light);
+    color: var(--dark-color);
     font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto;
