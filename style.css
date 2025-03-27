@@ -918,46 +918,6 @@ li::marker{
     transition: var(--transition);
 }
 
-/* Lightbox Modal (to be implemented with JavaScript) */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.lightbox img {
-    max-width: 100%;
-    max-height: 80vh;
-    border-radius: 8px;
-}
-
-.lightbox-caption {
-    color: white;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.close-lightbox {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .gallery-grid {
@@ -966,32 +926,6 @@ li::marker{
     
     .gallery-header h1 {
         font-size: 2rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .gallery-header h1 {
-        font-size: 1.8rem;
-    }
-    
-    .gallery-header p {
-        font-size: 1rem;
-    }
-    
-    .gallery-overlay {
-        padding: 15px;
-    }
-    
-    .gallery-overlay h3 {
-        font-size: 1rem;
-    }
-    
-    .gallery-overlay p {
-        font-size: 0.8rem;
     }
 }
 
@@ -1292,126 +1226,6 @@ li::marker{
     color: white;
 }
 
-/* A Taste of Korea Section */
-
-.place-section {
-    padding: 80px 0;
-    background-color: var(--light-color);
-}
-
-.place-content {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.place-text {
-    flex: 1;
-}
-
-.place-text h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--dark-color);
-}
-
-.place-text p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.place-text strong {
-    color: var(--primary-color);
-}
-
-.place-image {
-    flex: 1;
-}
-
-.place-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.place-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.place {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-}
-
-.place:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(210, 51, 105, 0.1);
-}
-
-.place img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin: 0 auto 20px;
-    display: block;
-}
-
-.place h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--dark-color);
-}
-
-.place p {
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .philosophy-content {
-        flex-direction: column;
-    }
-    
-    .philosophy-text,
-    .philosophy-image {
-        flex: none;
-        width: 100%;
-    }
-    
-    .philosophy-image {
-        order: -1;
-        margin-bottom: 30px;
-    }
-    
-    .history-timeline::before {
-        left: 30px;
-    }
-    
-    .timeline-year {
-        left: -80px;
-        width: 60px;
-    }
-    
-    .timeline-content {
-        margin-left: 60px;
-    }
-    
-    .timeline-content::before {
-        left: -20px;
-    }
-}
 
 @media (max-width: 768px) {
     .about-hero h1 {
@@ -1571,30 +1385,6 @@ li::marker{
     color: var(--dark-color);
 }
 
-.info-item2 {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 25px;
-}
-
-.info-item2 i {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-right: 20px;
-    margin-top: 5px;
-}
-
-.info-item2 h3 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: var(--dark-color);
-}
-
-.info-item2 p {
-    color: var(--text-light);
-    line-height: 1.6;
-}
-
 .social-links {
     margin-top: 40px;
 }
@@ -1661,10 +1451,6 @@ li::marker{
     .contact-hero h1 {
         font-size: 2.5rem;
     }
-    
-    .cta-content h2 {
-        font-size: 2rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1679,10 +1465,6 @@ li::marker{
     .contact-form,
     .contact-info {
         padding: 30px;
-    }
-    
-    .reservation-cta {
-        padding: 60px 0;
     }
 }
 
@@ -1702,13 +1484,5 @@ li::marker{
     .contact-form,
     .contact-info {
         padding: 25px 20px;
-    }
-    
-    .cta-content h2 {
-        font-size: 1.8rem;
-    }
-    
-    .cta-content p {
-        font-size: 1rem;
     }
 }
