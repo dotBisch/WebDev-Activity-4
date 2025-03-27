@@ -80,11 +80,12 @@ p{
 .btn {
     padding: 12px 24px;
     background-color: var(--primary-color);
+    border: 3px solid var(--dark-color);
     color: var(--light-color);
     text-decoration: none;
     border-radius: 10px;
     font-weight: 500;
-    border: none;
+    border: 3px solid var(--primary-color);
     cursor: pointer;
     font-family: quicksand-book;
     font-size: 24px;
@@ -463,7 +464,7 @@ li::marker{
     max-width: 900px;
     margin: 30px auto 40px;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 
 .cg-item {
@@ -1291,63 +1292,6 @@ li::marker{
     color: white;
 }
 
-/* Testimonials Section */
-.testimonials-section {
-    padding: 80px 0;
-    background-color: white;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.testimonial {
-    background-color: var(--secondary-color);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.quote {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.quote i {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    opacity: 0.3;
-    position: absolute;
-    top: -10px;
-    left: -10px;
-}
-
-.quote p {
-    font-style: italic;
-    line-height: 1.6;
-    position: relative;
-    z-index: 1;
-}
-
-.author {
-    border-top: 1px solid var(--accent-color);
-    padding-top: 15px;
-}
-
-.author p:first-child {
-    font-weight: 600;
-    color: var(--dark-color);
-}
-
-.author p:last-child {
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
 /* A Taste of Korea Section */
 
 .place-section {
@@ -1519,15 +1463,15 @@ li::marker{
 
 /* Contact Page Styles */
 .contact-page {
-    padding-top: 70px;
+    padding-top: 140px;
+    background: var(--light-color);
 }
 
 /* Contact Hero Section */
 .contact-hero {
-    height: 50vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/contact/contact-hero.jpg') no-repeat center center/cover;
     color: white;
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -1537,12 +1481,13 @@ li::marker{
 }
 
 .contact-hero h1 {
-    font-size: 3rem;
+    color: var(--dark-color);
+    font-size: 4rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contact-hero p {
+    color: var(--dark-color);
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto;
@@ -1550,21 +1495,25 @@ li::marker{
 
 /* Contact Content */
 .contact-content {
+    display: flex;
     padding: 80px 0;
     background-color: var(--light-color);
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 50px;
 }
 
 .contact-form {
-    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    background-color: transparent;
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
 }
 
 .contact-form h2 {
@@ -1578,6 +1527,7 @@ li::marker{
 }
 
 .form-group label {
+    font-family: quicksand-book;
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
@@ -1589,7 +1539,7 @@ li::marker{
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ddd;
+    border: 2px solid var(--dark-color);
     border-radius: 4px;
     font-family: inherit;
     font-size: 1rem;
@@ -1680,8 +1630,13 @@ li::marker{
 
 /* Map Section */
 .map-section {
-    padding: 60px 0;
-    background-color: var(--secondary-color);
+    padding-top: 30px;
+    padding-bottom: 120px;
+    background-color: transparent;
+}
+
+.contact-container{
+    text-align: center;
 }
 
 .map-section h2 {
@@ -1695,38 +1650,6 @@ li::marker{
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Reservation CTA */
-.reservation-cta {
-    padding: 80px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/contact/reservation-cta.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-}
-
-.cta-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.cta-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-}
-
-.btn-outline:hover {
-    background-color: white;
-    color: var(--primary-color);
 }
 
 /* Responsive Design */
