@@ -973,7 +973,7 @@ li::marker{
 
 .about-hero {
     height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../WebDev-Activity-4/assets/images/bg/about-us.png') no-repeat center center/cover;
+    background: url('../WebDev-Activity-4/assets/images/bg/about-us.png') no-repeat center center/cover;
     color: white;
     display: flex;
     align-items: center;
@@ -1146,86 +1146,103 @@ li::marker{
 }
 
 /* Team Section */
-.team-section {
-    padding: 80px 0;
+.our-team {
+    padding: 60px 0;
     background-color: var(--light-color);
+}
+
+.our-team .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-team-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.our-team-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.our-team-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.6;
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr) repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 24px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-grid > :nth-child(1),
+.team-grid > :nth-child(2),
+.team-grid > :nth-child(3) {
+    grid-row: 1;
+}
+
+.team-grid > :nth-child(4),
+.team-grid > :nth-child(5) {
+    grid-row: 2;
 }
 
 .team-member {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-}
-
-.team-member:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(210, 51, 105, 0.1);
+    width: 100%;
+    max-width: 250px;
 }
 
 .member-image {
-    height: 300px;
-    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 100%; 
+    border: 2px solid black;
 }
 
 .member-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
-}
-
-.team-member:hover .member-image img {
-    transform: scale(1.05);
+    object-position: center;
 }
 
 .member-info {
-    padding: 20px;
+    padding: 16px;
     text-align: center;
+    margin-top: 10px;
 }
 
 .member-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-    color: var (--dark-color);
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 4px;
 }
 
-.position {
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-bottom: 15px;
-    display: block;
+.member-info .position {
+    font-size: 0.9rem;
+    color:  #333;
+    margin-bottom: 0;
 }
-
-.member-social {
-    margin-top: 15px;
-}
-
-.member-social a {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    border-radius: 50%;
-    text-align: center;
-    line-height: 35px;
-    margin: 0 5px;
-    transition: var(--transition);
-}
-
-.member-social a:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
 
 @media (max-width: 768px) {
     .about-hero h1 {
