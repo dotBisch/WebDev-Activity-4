@@ -1075,6 +1075,21 @@ li::marker{
     flex: 1;
 }
 
+.mission-text ul {
+    list-style-type: disc;  /* Ensures bullet points appear */
+    padding-left: 20px;  /* Indents the list properly */
+    margin-left: 20px; /* Ensures alignment */
+    font-family: inherit; /* Ensures it follows the same font */
+    color: var(--dark-color); /* Ensures it follows the text color */
+}
+
+.mission-text li {
+    font-size: 1.1rem; /* Matches paragraph text size */
+    line-height: 1.6; /* Improves readability */
+    margin-bottom: 8px; /* Adds spacing between items */
+    font-family: inherit;
+}
+
 .mission-text h2 {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -1180,7 +1195,7 @@ li::marker{
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: auto auto; /* Two rows */
     gap: 24px;
     justify-content: center;
@@ -1190,14 +1205,12 @@ li::marker{
     margin: 0 auto;
 }
 
-/* Top row: Stays the same */
 .team-grid > :nth-child(1),
 .team-grid > :nth-child(2),
 .team-grid > :nth-child(3) {
     grid-column: auto;
 }
 
-/* Bottom row: Centering the two members properly */
 .team-grid > :nth-child(4),
 .team-grid > :nth-child(5) {
     grid-row: 2;
@@ -1242,6 +1255,63 @@ li::marker{
     font-size: 0.9rem;
     color:  #333;
     margin-bottom: 0;
+}
+
+/* A Taste of Korea */
+.place-section {
+    padding: 60px 0;
+    background-color: var(--light-color);
+}
+
+.place .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.place-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.place-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.place-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.6;
+}
+
+.place-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.place-grid img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 2px solid black;
+}
+
+.place-grid > :nth-child(1),
+.place-grid > :nth-child(2),
+.place-grid > :nth-child(3) {
+    grid-column: auto;
 }
 
 @media (max-width: 768px) {
