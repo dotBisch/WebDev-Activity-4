@@ -1057,14 +1057,15 @@ li::marker{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Our Mission */
+/* Our Mission*/
+
 .mission-section {
     padding: 80px 0;
     background-color: var(--light-color);
 }
 
 .mission-content {
-    display: flex;
+    display: block;
     align-items: center;
     gap: 50px;
     max-width: 1100px;
@@ -1072,22 +1073,36 @@ li::marker{
 }
 
 .mission-text {
+    display: block;
     flex: 1;
 }
 
 .mission-text ul {
-    list-style-type: disc;  /* Ensures bullet points appear */
-    padding-left: 20px;  /* Indents the list properly */
-    margin-left: 20px; /* Ensures alignment */
-    font-family: inherit; /* Ensures it follows the same font */
-    color: var(--dark-color); /* Ensures it follows the text color */
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 40px;
+    margin-left: 20px;
+    color: var(--dark-color);
+    font-family: quicksand-book;
+    font-weight: 700;
 }
 
 .mission-text li {
-    font-size: 1.1rem; /* Matches paragraph text size */
-    line-height: 1.6; /* Improves readability */
-    margin-bottom: 8px; /* Adds spacing between items */
-    font-family: inherit;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    font-family: quicksand-book;
+    font-weight: 700;
+    display: list-item;
+    list-style: disc outside;
+}
+
+.mission-text li::before {
+    content: "•";
+    color: var(--dark-color); 
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 8px;
 }
 
 .mission-text h2 {
@@ -1100,20 +1115,6 @@ li::marker{
     margin-bottom: 15px;
     font-size: 1.1rem;
     line-height: 1.6;
-}
-
-.mission-text strong {
-    color: var(--primary-color);
-}
-
-.mission-image {
-    flex: 1;
-}
-
-.mission-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Our Values */
@@ -1361,6 +1362,68 @@ li::marker{
         grid-template-columns: 1fr;
     }
 }
+
+/* Gallery Section */
+.gallery-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.gallery-container {
+    text-align: center;
+}
+
+.gallery-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.highlight {
+    color: var(--highlight-color);
+}
+
+.gallery-container > p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.main-gallery-image {
+    margin-bottom: 20px;
+}
+
+.main-gallery-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid black;
+}
+
+.gallery-description {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery-description h3 {
+    font-size: 1.8rem;
+    color: #E2784E;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.gallery-description p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
 
 /* Contact Page Styles */
 .contact-page {
