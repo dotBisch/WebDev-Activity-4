@@ -1,0 +1,305 @@
+/* about.css */
+.about-page {
+    padding: 100px 0 50px;
+    background-color: var(--light-color);
+}
+
+.about-subtitle {
+    color: var(--text-light);
+    margin-bottom: 70px;
+    font-size: 20px;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.about-content p {
+    color: var(--dark-color);
+    font-size: 20px;
+}
+
+.about-title {
+    font-size: 64px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Our Story */
+.story-section {
+    padding: 80px 0;
+    background-color: var(--light-color);
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.story-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.story-text strong {
+    color: var(--primary-color);
+}
+
+/* Our Mission */
+.mission-section {
+    padding: 80px 0;
+    background-color: var(--light-color);
+}
+
+.mission-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.mission-text {
+    flex: 1;
+}
+
+.mission-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.mission-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.mission-text ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.mission-text li {
+    margin-bottom: 8px;
+}
+
+.mission-text strong {
+    color: var(--primary-color);
+}
+
+/* Our Values */
+.values-section {
+    padding: 80px 0;
+    background-color: var(--light-color);
+}
+
+.values-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.values-text {
+    flex: 1;
+}
+
+.values-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.values-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.values-text strong {
+    color: var(--primary-color);
+}
+
+/* Team Section */
+.our-team {
+    padding: 60px 0;
+    background-color: var(--light-color);
+}
+
+.our-team .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our-team-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.our-team-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.our-team-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.6;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-member {
+    width: 100%;
+    max-width: 250px;
+}
+
+.member-image {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; 
+    border: 2px solid black;
+}
+
+.member-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.member-info {
+    padding: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.member-info h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.member-info .position {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 0;
+}
+
+/* A Taste of Korea Section */
+.place-section {
+    padding: 80px 0;
+    background-color: var(--light-color);
+}
+
+.place-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.place-header h2 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.place-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.place-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.place-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .story-content,
+    .mission-content,
+    .values-content {
+        flex-direction: column;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .place-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}

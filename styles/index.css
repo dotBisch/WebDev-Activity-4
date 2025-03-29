@@ -199,6 +199,8 @@ li::marker {
 }
 
 .gallery {
+    display: flex;
+    flex-direction: column;
     background-color: var(--light-color);
     text-align: center;
     padding-top: 10px;
@@ -207,14 +209,14 @@ li::marker {
 
 .h-gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: 300px 300px 300px;
     width: 100%;
-    gap: 50px;
+    gap: 20px;
     margin-bottom: 40px;
+    justify-content: center;
 }
 
 .h-gallery-item img {
-    border: 2px solid var(--dark-color);
     border-radius: 8px;
     max-width: 100%;
     height: auto;
@@ -354,10 +356,11 @@ li::marker {
         padding: 7px 15px;
     }
 
-    .h-gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .h-gallery-grid{
+        display: flex;
+        flex-wrap: wrap;
     }
-    
+
     .h-about-grid {
         display: flex;
         flex-wrap: wrap;
