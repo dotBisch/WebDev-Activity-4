@@ -1,0 +1,353 @@
+/* global.css */
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Korean Color Palette */
+:root {
+    --primary-color: #E2784E;
+    --secondary-color: #FFEEDC; 
+    --accent-color: #F6F6F6; 
+    --dark-color: #2E2E2E;
+    --light-color: #F6F6F6; 
+    --text-color: #1A1C1E;
+    --text-light: #777777;
+    --gold-color: #D4AF37;
+    --red-color: #E86D5E;
+    --transition: all 0.3s ease;
+}
+
+@font-face {
+    font-family: product-sans;
+    src: url(/assets/fonts/Product\ Sans\ Regular.ttf);
+}
+
+@font-face {
+    font-family: quicksand-light;
+    src: url(/assets/fonts/Quicksand_Light.otf);
+}
+
+@font-face {
+    font-family: quicksand-bold;
+    src: url(/assets/fonts/Quicksand_Bold.otf);
+}
+
+@font-face {
+    font-family: quicksand-book;
+    src: url(/assets/fonts/Quicksand_Book.otf);
+}
+
+@font-face {
+    font-family: alfa;
+    src: url(/assets/fonts/AlfaSlabOne-Regular.ttf);
+}
+
+body {
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: alfa;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: product-sans;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: quicksand-book;
+    color: var(--dark-color);
+    font-weight: 900;
+}
+
+p {
+    font-family: quicksand-book;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    padding: 14px 24px;
+    background-color: var(--primary-color);
+    border: 3px solid var(--dark-color);
+    color: var(--light-color);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 500;
+    border: 3px solid var(--primary-color);
+    cursor: pointer;
+    font-family: quicksand-book;
+    font-size: 18px;
+}
+
+.btn:hover {
+    border: 3px solid var(--primary-color);
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+/* Header Styles */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid var(--accent-color);
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 70px;
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    margin-left: 40px;
+}
+
+.logo-wrapper a {
+    text-decoration: none;
+    align-items: center;
+    font-family: quicksand-bold;
+    font-size: 32px;
+    color: var(--primary-color);
+    -webkit-text-stroke: 2px var(--primary-color);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li {
+    margin-left: 30px;
+}
+
+.nav-list a {
+    font-family: quicksand-bold;
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 5px auto;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 50px 0 20px;
+    background-image: url('images/korean-pattern-dark.png');
+    background-size: 300px;
+    background-blend-mode: overlay;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.footer-logo p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    margin-left: 10px;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Korean Pattern Overlay */
+@keyframes patternMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+/* Common Utility Classes */
+.colored-our {
+    color: var(--dark-color);
+}
+
+.colored-menu {
+    color: var(--primary-color);
+}   
+
+@media (max-width: 1024px){
+    .header .container {
+        max-width: 1000px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        margin-right: 50px;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-list {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+    }
+
+    .featured-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dish-card {
+        flex: 1 1 300px;
+        max-width: 90%;
+    }
+
+    .header .container {
+        justify-content:space-between;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .logo-wrapper{
+        margin: 0;
+    }
+
+    .logo-wrapper p{
+        font-size: 24px;
+    }   
+}
