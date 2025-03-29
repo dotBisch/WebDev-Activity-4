@@ -3,7 +3,7 @@
 .hero {
     display: flex;
     height: 100vh;;
-    background: url(/homebg.png);
+    background: url(/assets/images/bg/homebg.png);
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
