@@ -1,14 +1,24 @@
 /* about.css */
 .about-page {
-    padding: 100px 0 50px;
+    padding: 70px 0 50px;
     background-color: var(--light-color);
+}
+
+.story-section .container,
+.mission-section .container,
+.values-section .container, 
+.place-section .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .about-subtitle {
     color: var(--text-light);
     margin-bottom: 70px;
     font-size: 20px;
-    max-width: 600px;
+    max-width: 680px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -38,44 +48,45 @@
 }
 
 .section-header h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--dark-color);
     margin-bottom: 15px;
+    font-weight: 900;
 }
 
 .section-header p {
     color: var(--text-light);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 /* Our Story */
 .story-section {
-    padding: 80px 0;
     background-color: var(--light-color);
+    display: flex;
+    justify-content: center;
 }
 
 .story-content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 50px;
-    max-width: 1100px;
+    text-align: left;
     margin: 0 auto;
+    max-width: 980px;
 }
 
-.story-text {
-    flex: 1;
-}
 
 .story-text h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: var(--dark-color);
 }
 
 .story-text p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
+    margin-left: 20px;
 }
 
 .story-text strong {
@@ -94,27 +105,36 @@
     gap: 50px;
     max-width: 1100px;
     margin: 0 auto;
+    max-width: 980px;
 }
 
 .mission-text {
     flex: 1;
 }
 
+.mission-text ul{
+    font-family: quicksand-book;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 .mission-text h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: var(--dark-color);
 }
 
 .mission-text p {
     margin-bottom: 15px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
+    margin-left: 20px;
 }
 
 .mission-text ul {
     margin-bottom: 15px;
     padding-left: 20px;
+    margin-left: 30px;
 }
 
 .mission-text li {
@@ -135,7 +155,7 @@
     display: flex;
     align-items: center;
     gap: 50px;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -144,15 +164,16 @@
 }
 
 .values-text h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: var(--dark-color);
 }
 
 .values-text p {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
+    margin-left: 20px;
+
 }
 
 .values-text strong {
@@ -161,12 +182,11 @@
 
 /* Team Section */
 .our-team {
-    padding: 60px 0;
     background-color: var(--light-color);
 }
 
 .our-team .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 15px;
     display: flex;
@@ -174,9 +194,10 @@
     align-items: center;
 }
 
-.our-team-header {
-    text-align: center;
+.our-team-header{
+    text-align: left;
     margin-bottom: 40px;
+    width: 100%;
 }
 
 .our-team-header h2 {
@@ -185,11 +206,17 @@
     margin-bottom: 20px;
 }
 
-.our-team-header p {
-    max-width: 800px;
+.our-team-header {
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     color: #666;
     line-height: 1.6;
+}
+
+.our-team-header p{
+    margin-left: 20px;
+    margin-bottom: 30px;
 }
 
 .team-grid {
@@ -246,24 +273,24 @@
 
 /* A Taste of Korea Section */
 .place-section {
-    padding: 80px 0;
     background-color: var(--light-color);
 }
 
 .place-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
 }
 
 .place-header h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--dark-color);
     margin-bottom: 15px;
 }
 
 .place-header p {
-    color: var(--text-light);
-    font-size: 1.1rem;
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    padding-left: 20px;
 }
 
 .place-grid {
@@ -275,10 +302,9 @@
 
 .place-image img {
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
 }
 
 @media (max-width: 768px) {
@@ -291,6 +317,18 @@
     .team-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .about-page h2{
+        font-size: 2rem;
+    }
+
+    .about-page p{
+        font-size: 1.1rem;
+    }
+
+    .about-page ul{
+        font-size: 1.1rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -301,5 +339,103 @@
     .place-grid {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .story-section .container,
+    .mission-section .container,
+    .values-section .container, 
+    .place-section .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 0;
+}
+    /* Global text adjustments */
+    .about-title {
+        font-size: 2.5rem; /* Down from 64px */
+        margin-top: 30px;
+    }
+
+    .about-subtitle,
+    .about-content p,
+    .section-header p,
+    .story-text p,
+    .mission-text p,
+    .mission-text ul,
+    .values-text p,
+    .our-team-header p,
+    .place-header p {
+        font-size: 1rem; /* Base font size for readability */
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .section-header h2,
+    .story-text h2,
+    .mission-text h2,
+    .values-text h2,
+    .our-team-header h2,
+    .place-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .about-page {
+        padding: 80px 0 30px;
+    }
+
+    .about-content .about-subtitle {
+        margin-bottom: 40px;
+    }
+
+    .section-header,
+    .our-team-header {
+        margin-bottom: 30px;
+    }
+
+    .about-layout,
+    .mission-content,
+    .values-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .story-content,
+    .mission-content,
+    .values-content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .story-text p,
+    .mission-text p,
+    .values-text p,
+    .mission-text ul {
+        margin-left: 0; /* Remove indentation */
+        padding-left: 10px; /* Add slight padding */
+    }
+
+    /* Team section */
+    .team-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 20px;
+    }
+
+    .team-member {
+        max-width: 100%; /* Full width for team members */
+    }
+
+    /* Place section */
+    .place-grid {
+        flex-direction: column;
+    }
+
+    .place-image img {
+        max-width: 100%; /* Full width for images */
     }
 }
