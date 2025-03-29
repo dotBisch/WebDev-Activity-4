@@ -1468,10 +1468,10 @@ li::marker{
 }
 
 .gallery-description h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #E2784E;
     margin-top: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-align: center;
     font-family: alfa;
 }
