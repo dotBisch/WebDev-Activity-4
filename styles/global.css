@@ -136,9 +136,12 @@ p {
     text-decoration: none;
     align-items: center;
     font-family: quicksand-bold;
-    font-size: 32px;
     color: var(--primary-color);
     -webkit-text-stroke: 2px var(--primary-color);
+}
+
+.logo-wrapper p{
+    font-size: 30px;
 }
 
 .nav-list {
