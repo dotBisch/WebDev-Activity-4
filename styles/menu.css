@@ -4,6 +4,10 @@
     background-color: var(--light-color);
 }
 
+.menu-page .container {
+    padding: 0 70px;
+}
+
 .menu-title {
     font-size: 64px;
     margin-top: 50px;
@@ -35,19 +39,25 @@
 }
 
 .menu-nav a {
-    display: block;
-    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--dark-color);
     text-decoration: none;
     border: 2px solid var(--dark-color);
-    border-radius: 30px;
+    border-radius: 15px;
     transition: var(--transition);
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    padding: 15px;
+    font-family: quicksand-book;
 }
 
 .menu-nav a:hover,
 .menu-nav a.active {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
 }
 
 /* Menu Sections */
@@ -72,51 +82,81 @@
 /* Menu Items */
 .menu-items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
+    margin-top: 30px;
 }
 
 .menu-item {
-    border: 2px solid var(--dark-color);
+    width: 340px;
+    height: 410px;
+    border: 2.5px solid var(--dark-color);
     border-radius: 20px;
     padding: 20px;
+    background-color: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border-color: var(--primary-color);
+    border-color: var(--red-color);
+    background-color: var(--secondary-color);
 }
 
 .menu-item-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 300px;
+    height: 175px;
     border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto;
     margin-bottom: 15px;
+    border: 2.5px solid var(--dark-color);
 }
+
+.item-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .item-info h3 {
     font-size: 1.3rem;
     margin-bottom: 5px;
 }
 
+.item-info p{
+    color: var(--dark-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
 .dish-korean {
-    font-size: 0.9rem;
+    font-family: quicksand-book;
+    font-size: 1rem;
     color: var(--text-light);
     margin-bottom: 10px;
+    font-weight: 400;
 }
 
 .price {
-    font-size: 1.2rem;
+    font-family: quicksand-book;
     color: var(--primary-color);
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: auto;
+    text-align: left;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .menu-items {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
