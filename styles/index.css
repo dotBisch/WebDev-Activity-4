@@ -325,6 +325,42 @@ li::marker {
     font-size: 0.9rem;
 }
 
+/* For tablet and mobile sizes */
+@media (max-width: 1024px) {
+    .slider-container {
+        padding: 0 20px;
+    }
+    
+    .featured-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        overflow-x: visible;
+    }
+    
+    .dish-card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row on tablets */
+        min-width: 280px;
+        max-width: 100%;
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+
+    .dish-card img{
+        width: 420px;
+    }
+    
+    .prev-btn, .next-btn {
+        display: none !important; /* Hide navigation buttons */
+    }
+}
+
+@media (max-width: 640px) {
+    .dish-card {
+        flex: 1 1 100%;
+    }
+}
+
 @media (max-width: 768px) {
 
     .hero{
@@ -365,14 +401,12 @@ li::marker {
         flex-wrap: wrap;
         justify-content: center;
     }
+    .dish-card img{
+        width: 300px;
+    }
 }
 
 @media (max-width: 480px) {
-
-    .nav-list {
-        width: 100%;
-        padding: 10px 0;
-    }
 
     .h-about-grid {
         grid-template-columns: 1fr;
@@ -426,41 +460,8 @@ li::marker {
     .contact-hours span{
         font-size: 14px;
     }
-}
 
-/* For tablet and mobile sizes */
-@media (max-width: 1024px) {
-    .slider-container {
-        padding: 0 20px;
-    }
-    
-    .featured-slider {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        overflow-x: visible;
-    }
-    
-    .dish-card {
-        flex: 1 1 calc(50% - 20px); /* Two cards per row on tablets */
-        min-width: 280px;
-        max-width: 100%;
-        opacity: 1 !important;
-        transform: scale(1) !important;
-    }
-
-    .dish-card img{
-        width: 420px;
-    }
-    
-    .prev-btn, .next-btn {
-        display: none !important; /* Hide navigation buttons */
-    }
-}
-
-/* For mobile sizes */
-@media (max-width: 640px) {
-    .dish-card {
-        flex: 1 1 100%; /* Full width cards on mobile */
+    .contact-items{
+        gap: 10px;
     }
 }

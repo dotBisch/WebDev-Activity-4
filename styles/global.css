@@ -334,6 +334,11 @@ p {
         text-align: center;
     }
 
+    .nav-list {
+        width: 100%;
+        padding: 10px 0;
+    }
+
     .social-links {
         margin-top: 20px;
     }
