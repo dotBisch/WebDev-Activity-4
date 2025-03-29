@@ -26,11 +26,11 @@
     text-align: center;
 }
 
-.gallery-subtitle {
+.gallery-content .gallery-subtitle {
     color: var(--text-light);
     margin-bottom: 70px;
-    font-size: 20px;
-    max-width: 600px;
+    font-size: 25px;
+    max-width: 800px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -100,5 +100,46 @@
     .food-4, .food-5, .food-6 {
         grid-column: auto;
         grid-row: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .gallery-page{
+        text-align: center;
+    }
+
+    .gallery-page .container{
+        padding: 0;
+    }
+
+    .gallery-title{
+        line-height: 1;
+    }
+
+    .gallery-description .gallery-subtitle{
+        padding: 0;
+    }
+
+    .gallery-page .container img{
+        width: 290px;
+    }
+
+    .grid-container img{
+        width: 290px;
+    }
+
+    .gallery-content{
+        width: 100%;
+    }
+
+    .gallery-content .gallery-subtitle {
+        font-size: 20px;
+    }
+
+    .gallery-content h2{
+        text-align: left;
+        font-size: 1.4rem;
+        margin-left: 20px;
     }
 }
