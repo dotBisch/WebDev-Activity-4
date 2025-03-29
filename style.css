@@ -1467,10 +1467,26 @@ li::marker{
     margin: 20px 0;
 }
 
+.gallery-description h2 {
+    font-size: 1.5rem;
+    color: #E2784E;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .gallery-section h2 {
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 10px;
+    font-family: inherit;
+}
+
+.food-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: inherit;
 }
 
 .gallery-description h3 {
