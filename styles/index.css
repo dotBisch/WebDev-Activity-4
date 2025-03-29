@@ -3,7 +3,7 @@
 .hero {
     display: flex;
     height: 100vh;;
-    background: url(/assets/images/bg/homebg.png);
+    background: url(/homebg.png);
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
@@ -19,7 +19,7 @@
 
 .hero h1 {
     color: var(--dark-color);
-    font-size: 5rem;
+    font-size: 6.5rem;
     animation: fadeIn 1.5s ease;
     letter-spacing: 1px;
     font-weight: 400;
@@ -111,7 +111,6 @@ li::marker {
     object-fit: cover;
     border: 2.5px solid var(--dark-color);
     border-radius: 9px;
-    margin-left: 18px;
 }
 
 .dish-card-content {
@@ -399,8 +398,69 @@ li::marker {
         font-size: 3rem;
     }
 
+    .gallery p{
+        font-size: 16px;
+    }
+
+    .home-about p{
+        font-size: 16px;  
+    }
+
     .h-about-grid {
         gap: 20px;
         padding: 0 20px;
+    }
+
+    .dish-card img {
+        width: 250px;
+    }
+
+    .dish-card{
+        height: 468px;
+    }
+
+    .contact-hours p{
+        font-size: 14px;
+    }
+
+    .contact-hours span{
+        font-size: 14px;
+    }
+}
+
+/* For tablet and mobile sizes */
+@media (max-width: 1024px) {
+    .slider-container {
+        padding: 0 20px;
+    }
+    
+    .featured-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        overflow-x: visible;
+    }
+    
+    .dish-card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row on tablets */
+        min-width: 280px;
+        max-width: 100%;
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+
+    .dish-card img{
+        width: 420px;
+    }
+    
+    .prev-btn, .next-btn {
+        display: none !important; /* Hide navigation buttons */
+    }
+}
+
+/* For mobile sizes */
+@media (max-width: 640px) {
+    .dish-card {
+        flex: 1 1 100%; /* Full width cards on mobile */
     }
 }
