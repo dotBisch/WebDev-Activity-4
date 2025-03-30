@@ -300,15 +300,20 @@ p {
     }
 
     .nav-list {
+        display: flex;
         position: fixed;
         left: -100%;
         top: 70px;
         flex-direction: column;
         background-color: white;
         width: 100%;
+        height: calc(100vh - 70px);
         text-align: center;
+        align-items: center;
+        justify-content: center;
         transition: var(--transition);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        gap: 0;
     }
 
     .nav-list.active {
@@ -317,6 +322,10 @@ p {
 
     .nav-list li {
         margin: 15px 0;
+    }
+
+    .nav-list a{
+        display: block;
     }
 
     .featured-slider {
