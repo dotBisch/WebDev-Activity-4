@@ -432,12 +432,16 @@ li::marker {
         font-size: 3rem;
     }
 
-    .gallery p{
+    .gallery p, .home-about p{
         font-size: 16px;
     }
 
-    .home-about p{
-        font-size: 16px;  
+    .contact-hours p, .contact-hours span{
+        font-size: 12px;
+    }
+
+    .contact-hours i{
+        font-size: 16px;
     }
 
     .h-about-grid {
@@ -451,14 +455,6 @@ li::marker {
 
     .dish-card{
         height: 468px;
-    }
-
-    .contact-hours p{
-        font-size: 14px;
-    }
-
-    .contact-hours span{
-        font-size: 14px;
     }
 
     .contact-items{
