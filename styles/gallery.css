@@ -137,6 +137,11 @@
         font-size: 20px;
     }
 
+    .gallery-content .gallery-subtitle{
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+
     .gallery-content h2{
         text-align: left;
         font-size: 1.4rem;
