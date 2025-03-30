@@ -266,11 +266,11 @@ p {
 }
 
 /* Common Utility Classes */
-.colored-our {
+.text-color-dark {
     color: var(--dark-color);
 }
 
-.colored-menu {
+.text-color-primary {
     color: var(--primary-color);
 }   
 
