@@ -16,7 +16,7 @@
 
 .about-img {
     width: 100%;
-    max-width: 1440px;
+    max-width: 100%;
     height: 80vh;
     background-image: url(/assets/images/bg/about-us.png);
     background-size: cover;
@@ -250,6 +250,7 @@
     width: 100%;
     padding-top: 100%; 
     border: 2px solid black;
+    border-radius: 20px;
 }
 
 .member-image img {
@@ -261,6 +262,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 20px;
 }
 
 .member-info {
@@ -315,6 +317,7 @@
     max-width: 300px;
     height: auto;
     border: 2px solid black;
+    border-radius: 20px;
 }
 
 .about-page p{

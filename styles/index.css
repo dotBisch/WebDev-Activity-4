@@ -85,7 +85,7 @@
     height: 460px;
     transition: all 0.3s ease;
     background: none;
-    border: 2.5px solid var(--dark-color);
+    border: 2px solid var(--dark-color);
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -109,7 +109,7 @@ li::marker {
     width: 290px;
     height: 200px;
     object-fit: cover;
-    border: 2.5px solid var(--dark-color);
+    border: 2px solid var(--dark-color);
     border-radius: 9px;
 }
 
@@ -216,7 +216,8 @@ li::marker {
 }
 
 .h-gallery-item img {
-    border-radius: 8px;
+    border: 2px solid var(--dark-color);
+    border-radius: 20px;
     max-width: 100%;
     height: auto;
 }
@@ -245,6 +246,8 @@ li::marker {
 .h-about-item img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
+    border: 2px solid var(--dark-color);
 }
 
 /* Home Contact Section */
